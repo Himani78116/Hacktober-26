@@ -158,7 +158,7 @@ export default function LocationMap({
             onClick={handleUseMyLocation}
             disabled={geocoding}
           >
-            🧭 Use My Current Location
+            Use My Current Location
           </button>
         )}
       </div>

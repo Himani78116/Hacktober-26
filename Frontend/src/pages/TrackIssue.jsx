@@ -102,7 +102,7 @@ export default function TrackIssue() {
     <div className="track-page-container">
       {/* Header & Search Bar */}
       <div className="track-header-banner">
-        <h1 className="track-main-title">🔎 Track Civic Issue &amp; Two-Way Grievance</h1>
+        <h1 className="track-main-title">Track Civic Issue &amp; Two-Way Grievance</h1>
         <p className="track-subtitle">
           Real-time tracking of report status, messaging delivery, scheduled follow-up countdowns, and two-way citizen replies.
         </p>

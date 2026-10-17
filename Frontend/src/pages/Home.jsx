@@ -71,20 +71,6 @@ export function Home({ backendHealth, aiHealth }) {
         gap: '1.5rem'
       }}>
         <div style={{ maxWidth: '650px' }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            padding: '0.25rem 0.75rem',
-            borderRadius: '9999px',
-            backgroundColor: 'var(--teal-50)',
-            color: 'var(--teal-700)',
-            fontWeight: 600,
-            fontSize: '0.8125rem',
-            marginBottom: '0.75rem'
-          }}>
-            🏛️ AI-Powered Civic Grievance Management &amp; Follow-Up
-          </div>
           <h1 style={{ fontSize: '2.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>
             Empowering Citizens to Fix Local Infrastructure
           </h1>
@@ -99,14 +85,14 @@ export function Home({ backendHealth, aiHealth }) {
             className="btn btn-primary"
             style={{ padding: '0.875rem 1.5rem', fontSize: '1rem', borderRadius: 'var(--radius-md)' }}
           >
-            📸 Report an Issue
+            Report an Issue
           </Link>
           <Link
             to="/track"
             className="btn btn-outline"
             style={{ padding: '0.875rem 1.5rem', fontSize: '1rem', borderRadius: 'var(--radius-md)', fontWeight: 600 }}
           >
-            🔎 Track Issue
+            Track Issue
           </Link>
         </div>
       </div>
@@ -165,7 +151,7 @@ export function Home({ backendHealth, aiHealth }) {
       {/* How the CivicEye AI & Follow-up Flow Works */}
       <div className="card" style={{ marginBottom: '2.5rem', backgroundColor: 'var(--bg-surface)' }}>
         <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-          🔄 How the CivicEye AI &amp; Follow-Up Flow Works
+          How the CivicEye AI &amp; Follow-Up Flow Works
         </h2>
         <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
           The end-to-end civic accountability loop connects citizens, artificial intelligence, and municipal operations:
@@ -244,7 +230,7 @@ export function Home({ backendHealth, aiHealth }) {
           </h2>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <Link to="/track" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--teal-700)' }}>
-              🔎 Track by ID →
+              Track by ID →
             </Link>
             <Link to="/reports" style={{ fontSize: '0.875rem', fontWeight: 600 }}>
               View All ({stats.totalReports}) →
@@ -258,7 +244,6 @@ export function Home({ backendHealth, aiHealth }) {
           </div>
         ) : recentReports.length === 0 ? (
           <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📋</div>
             <h3 style={{ fontSize: '1.125rem', marginBottom: '0.5rem' }}>No civic reports yet</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', marginBottom: '1.25rem' }}>
               Be the first to report a local civic issue in your neighborhood.
@@ -305,7 +290,7 @@ export function Home({ backendHealth, aiHealth }) {
                       <td style={{ padding: '1rem 1.25rem', textAlign: 'right' }}>
                         <div style={{ display: 'inline-flex', gap: '0.5rem' }}>
                           <Link to={`/track/${report.id}`} className="btn btn-outline" style={{ padding: '0.35rem 0.65rem', fontSize: '0.8125rem' }}>
-                            🔎 Track
+                            Track
                           </Link>
                           <Link to={`/reports/${report.id}`} className="btn btn-secondary" style={{ padding: '0.35rem 0.65rem', fontSize: '0.8125rem' }}>
                             Details

@@ -93,14 +93,6 @@ export function ReportIssue({ backendHealth, aiHealth }) {
         </p>
       </div>
 
-      {!backendHealth?.connected && (
-        <Alert
-          type="warning"
-          title="Backend Disconnected"
-          message="Spring Boot backend is currently unreachable at http://localhost:8080. Start the backend with 'mvn spring-boot:run' to enable AI analysis and report persistence."
-        />
-      )}
-
       {saveSuccess && (
         <Alert type="success" title="Success" message={saveSuccess} />
       )}

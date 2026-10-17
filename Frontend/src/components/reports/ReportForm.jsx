@@ -163,7 +163,7 @@ export function ReportForm({ onAnalyze, isAnalyzing, error, onRetry, defaultDemo
                 className="btn btn-outline btn-sm"
                 onClick={() => cameraInputRef.current?.click()}
               >
-                📷 Take Photo with Camera
+                Take Photo with Camera
               </button>
             </div>
           </div>
@@ -284,7 +284,7 @@ export function ReportForm({ onAnalyze, isAnalyzing, error, onRetry, defaultDemo
       }}>
         <div>
           <label htmlFor="demo-toggle" style={{ fontWeight: 600, fontSize: '0.875rem', cursor: 'pointer', display: 'block' }}>
-            🧪 Demo Mode (Simulated AI Analysis)
+            Demo Mode (Simulated AI Analysis)
           </label>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
             Test without consuming live Google Gemma 4 API quota.

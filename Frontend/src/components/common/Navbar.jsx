@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import StatusBadge from './StatusBadge';
 
-export function Navbar({ backendHealth, aiHealth }) {
+export function Navbar() {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
@@ -44,29 +43,6 @@ export function Navbar({ backendHealth, aiHealth }) {
             </li>
           </ul>
         </nav>
-
-        <div className="nav-status-group">
-          {/* Backend indicator */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: '0.75rem' }}>
-            <span style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>Backend:</span>
-            <StatusBadge status={backendHealth?.status} type="connection" />
-          </div>
-
-          {/* AI Engine indicator */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: '0.75rem' }}>
-            <span style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>AI Engine:</span>
-            <span className={`badge ${aiHealth?.connected ? (aiHealth?.gemmaKeyConfigured ? 'badge-connected' : 'badge-demo') : 'badge-disconnected'}`}>
-              <span className="badge-dot" />
-              {aiHealth?.connected
-                ? (aiHealth?.gemmaKeyConfigured ? 'Gemma 4 Live' : 'Demo Available')
-                : 'Offline'}
-            </span>
-          </div>
-
-          <Link to="/report" className="btn btn-primary" style={{ padding: '0.45rem 1rem', fontSize: '0.875rem' }}>
-            + Report Issue
-          </Link>
-        </div>
       </div>
     </header>
   );
